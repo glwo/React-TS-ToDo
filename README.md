@@ -2,7 +2,8 @@
 
 React-TS-ToDo is a web-based ToDo application built with React and TypeScript. It provides a clean and organized interface for managing tasks and helps users keep track of their to-do list efficiently.
 
-![Todo App](link_to_your_todo_app_image)
+![Todo App](![image](https://github.com/glwo/React-TS-ToDo/assets/112520930/da2212fb-6a16-4b25-a28f-efa54ea17a16)
+)
 
 ## Key Features
 
