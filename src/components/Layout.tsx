@@ -5,7 +5,7 @@ import '../App.css';
 import Divider from '@mui/joy/Divider';
 
 import DashboardIcon from '@mui/icons-material/SpaceDashboardOutlined';
-import UsersIcon from '@mui/icons-material/PeopleAltOutlined';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import FAQIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 interface LayoutProps {
@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ tabIndex, children }) => {
             className={selectedIndex === 1 ? 'Menu-item-selected' : 'Menu-item'}
             onClick={(event) => handleListItemClick(event, 1)}
           >
-            <UsersIcon />
+            <CheckCircleOutlineIcon />
             <p>
               <strong>Tasks</strong>
             </p>

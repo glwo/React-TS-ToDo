@@ -36,7 +36,7 @@ const Dashboard: React.FC<DashboardProps> = (props) => {
       if(task.completed === true){
         completed++;
       }
-      task.types.forEach((type: string) => {
+      task.types?.forEach((type: string) => {
         if (type === 'work') {
           work++;
         } else if (type === 'wellness') {
