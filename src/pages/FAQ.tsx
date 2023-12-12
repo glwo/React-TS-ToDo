@@ -17,10 +17,6 @@ const FAQ: React.FC<FAQProps> = (props) => {
       <p><strong>Delete Tasks:</strong> Remove unwanted tasks using the 'Delete' option in the Todo app.</p>
       <Divider></Divider>
 
-      <h2>How do I search for specific tasks in the Todo app?</h2>
-      <p>Utilize the search bar in the Todo app to find tasks quickly. Enter keywords or task descriptions to filter and locate specific tasks.</p>
-      <Divider></Divider>
-
       <h2>Can I categorize tasks based on different types?</h2>
       <p>Yes, you can categorize tasks into four types: work, wellness, personal, and learning. Use the 'Type' category to distinguish between different task categories.</p>
       <Divider></Divider>
