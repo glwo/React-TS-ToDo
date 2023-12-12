@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/CSR-Front-End/static/css/main.e0bae06d.css",
-    "main.js": "/CSR-Front-End/static/js/main.c13f4d7a.js",
-    "index.html": "/CSR-Front-End/index.html",
-    "main.e0bae06d.css.map": "/CSR-Front-End/static/css/main.e0bae06d.css.map",
-    "main.c13f4d7a.js.map": "/CSR-Front-End/static/js/main.c13f4d7a.js.map"
+    "main.css": "/React-TS-ToDo/static/css/main.e0bae06d.css",
+    "main.js": "/React-TS-ToDo/static/js/main.c13f4d7a.js",
+    "index.html": "/React-TS-ToDo/index.html",
+    "main.e0bae06d.css.map": "/React-TS-ToDo/static/css/main.e0bae06d.css.map",
+    "main.c13f4d7a.js.map": "/React-TS-ToDo/static/js/main.c13f4d7a.js.map"
   },
   "entrypoints": [
     "static/css/main.e0bae06d.css",
