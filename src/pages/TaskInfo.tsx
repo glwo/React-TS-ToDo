@@ -41,13 +41,6 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
   const typesOptions = ["work", "wellness", "learning", "personal"];
 
   useEffect(() => {
-    console.log('Task:', task);
-    console.log('Edit Task:', editTask);
-    console.log('Selected Index:', selectedIndex);
-    console.log('Save Task Disabled:', saveTaskDisabled);
-  }, [task, editTask, selectedIndex, saveTaskDisabled]);
-
-  useEffect(() => {
     // Ensure that routeParams.taskId is defined before using it
     if (routeParams.taskId !== undefined) {
       const taskId = Number(routeParams.taskId);

@@ -2,6 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://glwo.github.io/React-TS-ToDo/",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -25,7 +26,6 @@
     "redux-devtools-extension": "^2.13.9",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://glwo.github.io/React-TS-ToDo/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

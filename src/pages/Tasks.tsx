@@ -94,7 +94,6 @@ const Tasks: React.FC<TasksProps> = () => {
       description: newTask.description,
       types: newTask.types,
     };
-    console.log(newTask.types);
 
     dispatch(addTaskAction);
     handleCloseAddTaskDialog();
