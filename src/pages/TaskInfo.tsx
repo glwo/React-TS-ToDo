@@ -40,6 +40,8 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
 
   const [editTaskDialogOpen, setEditTaskDialogOpen] = useState(false);
 
+  const [isFormValid, setIsFormValid] = useState(false);
+
   const typesOptions = ["work", "wellness", "learning", "personal"];
 
   useEffect(() => {
@@ -100,6 +102,12 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
   };
 
   const handleSaveTask = () => {
+    if (editTask.description.trim() === "" || editTask.types.length === 0) {
+      // Invalid input, set isFormValid to false
+      setIsFormValid(false);
+      return;
+    }
+
     if (!saveTaskDisabled) {
       let tempTasks = _.cloneDeep(tasks);
       tempTasks[selectedIndex] = _.cloneDeep(editTask);
@@ -226,6 +234,12 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
                       }
                       autoFocus
                       required
+                      onBlur={() =>
+                    setIsFormValid(
+                      editTask.description.trim() !== "" &&
+                        editTask.types.length > 0
+                    )
+                  }
                     />
                   </FormControl>
                   <FormControl>

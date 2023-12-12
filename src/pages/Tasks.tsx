@@ -39,9 +39,10 @@ const Tasks: React.FC<TasksProps> = () => {
     types: [],
     completed: false,
   });
-  const [saveNewTaskDisabled, setNewSaveTaskDisabled] = useState(false);
 
   const [searchString, setSearchString] = useState<string | null>(null);
+
+  const [isFormValid, setIsFormValid] = useState(false);
 
   const typesOptions = ["work", "wellness", "learning", "personal"];
 
@@ -85,6 +86,13 @@ const Tasks: React.FC<TasksProps> = () => {
   };
 
   const handleSaveNewTask = () => {
+    // Check if the description and types are provided
+    if (newTask.description.trim() === "" || newTask.types.length === 0) {
+      // Invalid input, set isFormValid to false
+      setIsFormValid(false);
+      return;
+    }
+
     // Dispatch the action to add the new task
     const addTaskAction: AddTaskAction = {
       type: ADD_TASK,
@@ -321,6 +329,12 @@ const Tasks: React.FC<TasksProps> = () => {
                   }
                   autoFocus
                   required
+                  onBlur={() =>
+                    setIsFormValid(
+                      newTask.description.trim() !== "" &&
+                        newTask.types.length > 0
+                    )
+                  }
                 />
               </FormControl>
               <FormControl>
@@ -361,8 +375,7 @@ const Tasks: React.FC<TasksProps> = () => {
                 className="addIconButton"
                 style={{
                   marginLeft: "8px",
-                  fontWeight: "800",
-                  backgroundColor: saveNewTaskDisabled ? "grey" : "",
+                  fontWeight: "800"
                 }}
                 onClick={() => handleSaveNewTask()}
               >
