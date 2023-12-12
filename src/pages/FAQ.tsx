@@ -26,7 +26,7 @@ const FAQ: React.FC<FAQProps> = (props) => {
       <Divider></Divider>
 
       <h2>How to navigate to view detailed information about a specific task?</h2>
-      <p>Click on a task to navigate to a detailed view, where you can see more information about the task and make necessary updates.</p>
+      <p>Click on a task's edit button to navigate to a detailed view, where you can see more information about the task and make necessary updates.</p>
     </div>
   );
 }
