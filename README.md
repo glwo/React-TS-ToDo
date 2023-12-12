@@ -10,11 +10,9 @@ React-TS-ToDo is a web-based ToDo application built with React and TypeScript. I
 
 - Task Details: Clicking on a task reveals more details, including task types and completion status.
 
-- Edit Task: Users can edit task information, such as description and types, using a modal component.
+- CRUD Operations: Users can perform full CRUD (Create, Read, Update, Delete) operations on tasks. This includes creating new tasks with descriptions and types, viewing a list of tasks, editing task information such as descriptions and types using a modal component, and   deleting tasks as needed
 
 - Task Types: Each task can be categorized into different types, such as work, wellness, learning, or personal.
-
-- Search Functionality: The app includes a search bar to easily find and filter tasks by their descriptions.
 
 ## Technology Stack
 
