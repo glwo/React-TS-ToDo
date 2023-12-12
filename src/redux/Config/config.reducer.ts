@@ -5,9 +5,9 @@ import { ConfigActionTypes } from './config.actions';
 import taskData from "../../taskData.json";
 
 export interface Task {
-  id: number; // Assuming you have a unique identifier for tasks
+  id: number;
   description: string;
-  types: string[]; // Types could be an array of strings
+  types: string[];
   completed: boolean;
 }
 

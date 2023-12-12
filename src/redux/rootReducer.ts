@@ -2,7 +2,7 @@ import { combineReducers, Reducer } from 'redux';
 import { ConfigActionTypes } from './Config/config.actions';
 import configReducer, { ConfigState } from './Config/config.reducer';
 
-interface RootState {
+export interface RootState {
   config: ConfigState;
 }
 

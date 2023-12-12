@@ -9,7 +9,7 @@ import { Task } from '../../pages/Dashboard';
 
 export interface SetTaskAction {
   type: typeof SET_TASKS;
-  tasks: Task[]; // Assuming Task is a type or interface representing your task structure
+  tasks: Task[];
 }
 
 export interface AddTaskAction {

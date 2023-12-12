@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import Chip from '@mui/joy/Chip';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { LineChart } from '@mui/x-charts/LineChart';
+import { RootState } from '../redux/rootReducer';
 
 export interface Task {
   id: number;
@@ -16,7 +17,7 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = (props) => {
-  const tasks = useSelector((state: any) => state.config.tasks);
+  const tasks = useSelector((state: RootState) => state.config.tasks);
   const [totalTasks, setTotalTasks] = useState<number | undefined>(undefined);
   const [completedTasks, setCompletedTasks] = useState<number | undefined>(undefined);
   const [workTasks, setWorkTasks] = useState<number | undefined>(undefined);
@@ -60,7 +61,7 @@ const Dashboard: React.FC<DashboardProps> = (props) => {
   const renderPieChart = () => {
     // Check if Taskscription counts are defined before using them in the data array
     if (workTasks === undefined || wellnessTasks === undefined || personalTasks === undefined || learningTasks === undefined) {
-      return null; // Or some default value or loading indicator
+      return null;
     }
 
     let data = [

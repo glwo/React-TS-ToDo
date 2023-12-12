@@ -15,6 +15,8 @@ import _ from "lodash";
 
 import { Task } from "./Dashboard";
 
+import { RootState } from '../redux/rootReducer';
+
 import { SetTaskAction } from "../redux/Config/config.actions";
 import FormControlLabel from "@mui/material/FormControlLabel/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -23,7 +25,7 @@ interface TaskInfoProps {}
 
 const TaskInfo: React.FC<TaskInfoProps> = () => {
   const dispatch = useDispatch();
-  const tasks = useSelector((state: any) => state.config.tasks);
+  const tasks = useSelector((state: RootState) => state.config.tasks);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const [task, setTask] = useState<Task>(tasks[0]);
@@ -100,7 +102,7 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
   const handleSaveTask = () => {
     if (!saveTaskDisabled) {
       let tempTasks = _.cloneDeep(tasks);
-      tempTasks[selectedIndex] = _.cloneDeep(editTask); // Use editTask here instead of task
+      tempTasks[selectedIndex] = _.cloneDeep(editTask);
       const setTaskAction: SetTaskAction = {
         type: "SET_TASKS",
         tasks: tempTasks,
@@ -132,16 +134,16 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
   const getBackgroundColor = (type: string): string => {
     switch (type) {
       case "work":
-        return "#9a5b13"; // Set your desired color for 'work'
+        return "#9a5b13";
 
       case "wellness":
-        return "#0b6bcb"; // Set your desired color for 'wellness'
+        return "#0b6bcb";
 
       case "personal":
-        return "#c41c1c"; // Set your desired color for 'personal'
+        return "#c41c1c";
 
       default:
-        return "#5A5A72"; // Set your desired color for 'learning' or any other type
+        return "#5A5A72";
     }
   };
 
@@ -236,7 +238,7 @@ const TaskInfo: React.FC<TaskInfoProps> = () => {
                             <Checkbox
                               checked={editTask.types.includes(type)}
                               onChange={() => handleChangeTaskCheckbox(type)}
-                              sx={{ marginLeft: 0, marginRight: 1 }} // Adjust spacing here
+                              sx={{ marginLeft: 0, marginRight: 1 }}
                             />
                           }
                           label={type}

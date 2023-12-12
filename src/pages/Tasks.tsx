@@ -45,9 +45,6 @@ const Tasks: React.FC<TasksProps> = () => {
 
   const typesOptions = ["work", "wellness", "learning", "personal"];
 
-  const completedTasks = tasks.filter((task: Task) => task.completed);
-  const incompleteTasks = tasks.filter((task: Task) => !task.completed);
-
   useEffect(() => {
     console.log(searchString);
   }, [searchString]);
@@ -262,10 +259,9 @@ const Tasks: React.FC<TasksProps> = () => {
 
       {/* <div className="Search-bar">
         <Input
-          sx={{ width: "100%" }}
+          style={{ width: "100%" }}
           placeholder="Search for a task"
           type="search"
-          freeSolo
           disableClearable
           options={tasks.map((option: Task) => option.description)}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
@@ -337,7 +333,7 @@ const Tasks: React.FC<TasksProps> = () => {
                         <Checkbox
                           checked={newTask.types.includes(type)}
                           onChange={() => handleTypeCheckboxChange(type)}
-                          sx={{ marginLeft: 0, marginRight: 1 }} // Adjust spacing here
+                          sx={{ marginLeft: 0, marginRight: 1 }}
                         />
                       }
                       label={type}
