@@ -1,0 +1,242 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Layout {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  background-color: #F6F6F6;
+  display: flex;
+  color: white;
+}
+
+.Sidebar {
+  width: 16vw;
+  min-width: 250px;
+  background-color: #f8f8f8;
+  color: #636363;
+  border-radius: 0 8px 8px 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.Menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+.Menu-item:hover {
+  background-color: #fdfdfd;
+}
+
+.Menu-item-selected {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #e8e9eb;
+  margin: 4px 0;
+}
+
+.Page-container {
+  height: 100%;
+  width: 100%;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #636363;
+  overflow-y: scroll;
+}
+
+.Dashboard-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Dashboard-card {
+  width: 100%;
+  height: 200px;
+  background-color: #EBEBEB;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  position: relative;
+}
+
+.Dashboard-card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Dashboard-chip {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  height: 40px;
+}
+
+table thead {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 3 !important;
+}
+
+th, td {
+  padding: 5px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+th {
+  font-weight: 800;
+  text-align: left;
+  height: 50px;
+}
+
+tr {
+  outline: 4px solid #EBEBEB;
+  border-radius: 7px;
+  background-color:  #EBEBEB;
+}
+
+.addIconButton {
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 4px;
+  box-sizing: border-box;
+  color: white;
+  background-color: #4660DC;
+}
+.addIconButton:hover {
+  background-color: #3448A8;
+}
+.addIconButton:active {
+  transform: scale(0.95);
+}
+
+.cancelIconButton {
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 4px;
+  box-sizing: border-box;
+  background-color: #D9D9D9;
+}
+.cancelIconButton:hover {
+  background-color: #C2C2C2;
+}
+.cancelIconButton:active {
+  transform: scale(0.95);
+}
+
+.editIconButton {
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #D9D9D9;
+}
+.editIconButton:hover {
+  background-color: #C2C2C2;
+}
+.editIconButton:active {
+  transform: scale(0.95);
+}
+
+.deleteIconButton {
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #db5243;
+}
+.deleteIconButton:hover {
+  background-color: #8B1320;
+}
+.deleteIconButton:active {
+  transform: scale(0.95);
+}
+
+.Search-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
